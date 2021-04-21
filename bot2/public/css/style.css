@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: cadetblue;
+}
+
+h1 {
+    padding: 2em;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    text-align: center;
+    font-size: 3em;
+}
+
+.hide {
+    display: none !important;
+}
+
+.three-cols {
+    display: flex;
+    flex-flow: row;
+    width: 85vw;
+    height: 70vh;
+    /* background-color: red; */
+    margin: auto;
+}
+
+.column {
+    width: 25%;
+    background-image: url(../images/columna.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.game {
+    width: 50%;
+    /* background-color: green; */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+/**/
+
+.arena {
+    display: flex;
+    /* align-items: flex-start; */
+    /* width: 100%; */
+    position: relative;
+    height: 50%;
+}
+
+.arena-display {
+    display: flex;
+}
+
+.arena-display>li {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: yellow;
+    font-weight: bolder;
+    text-shadow: 0px 0px 4px red;
+    /* background-color: lightblue; */
+}
+
+.choice {
+    /*Font*/
+    font-size: 3em;
+    color: greenyellow;
+    font-weight: bolder;
+    text-shadow: 0px 0px 4px red;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Image*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.result {
+    font-size: 2rem;
+    color: yellow;
+    font-weight: bolder;
+    text-shadow: 0px 0px 4px red;
+}
+
+
+
+.choice, .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.countdown {
+    animation-name: countdown;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+    /*NUMBER*/
+    background-color: black;
+    font-size: 5em;
+    border-radius: 50%;
+    border: 10px solid white;
+    color: white;
+}
+
+/*animation*/
+
+@keyframes countdown {
+    from {
+        transform: scale(1.02);
+        /* background-color: red; */
+    }
+    to {
+        transform: scale(.02);
+        /* background-color: yellow; */
+    }
+}
+
+/*Options*/
+
+.rock {
+    background-image: url(../images/piedra.png);
+}
+
+.paper {
+    background-image: url(../images/papel.png);
+}
+
+.scissor {
+    background-image: url(../images/tijeras.png);
+}
+
+/*Viewers*/
+
+.viewers {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: black;
+    color: blanchedalmond;
+    border: 2px solid gray;
+    font-size: 2em;
+}
+.viewers > div{
+    padding: 5px;
+}
+.myself{
+    animation-name: myself;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes myself {
+    0%{
+        background-color: black;
+        color: blanchedalmond;
+    }
+    25%{
+        background-color: rgb(238, 255, 0);
+        color: black;
+    }
+    50%{
+        background-color: black;
+        color: blanchedalmond;
+    }
+    75%{
+        background-color: rgb(238, 255, 0);
+        color: black;
+    }
+    100%{
+        background-color: black;
+        color: blanchedalmond;
+    }
+}
